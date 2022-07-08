@@ -27,7 +27,8 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -1986,50 +1987,100 @@ input, select, textarea {
 
 /* Wrappers */
 
-	.wrapper {
-		background-image: url("images/bg.png");
+.wrapper {
+	background-image: url("images/bg.png");
+	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+	padding: 8em 0 8em 0;
+	text-align: center;
+}
+
+	.wrapper.style1 {
+		background-image: none;
+		background-color: #fff;
+	}
+
+	.wrapper.style2 {
+		background-color: #fafafa;
+		text-shadow: 1px 1px 0px #fff;
+	}
+
+	.wrapper.style3 {
+		background-color: #f4f4f4;
+		text-shadow: 1px 1px 0px #fff;
+	}
+
+	.wrapper.style4 {
+		background-color: #303030;
+		color: #999;
+		text-shadow: -1px -1px 0px #181818;
+		padding: 0em 0 0.5em 0;
+	}
+
+		.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
+			color: #fff;
+		}
+
+		.wrapper.style4 form input[type=text],
+		.wrapper.style4 form input[type=password],
+		.wrapper.style4 form select,
+		.wrapper.style4 form textarea {
+			border: none;
+			background: #282828;
+		}
+
+			.wrapper.style4 form input[type=text]:focus,
+			.wrapper.style4 form input[type=password]:focus,
+			.wrapper.style4 form select:focus,
+			.wrapper.style4 form textarea:focus {
+				background: #252525;
+			}
+
+
+	.wrapper.lightmode {
+		background-image: url("images/bglightmode.png");
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		padding: 8em 0 8em 0;
 		text-align: center;
 	}
 
-		.wrapper.style1 {
+		.wrapper.style1.lightmode {
 			background-image: none;
 			background-color: #fff;
 		}
 
-		.wrapper.style2 {
+		.wrapper.style2.lightmode {
 			background-color: #fafafa;
 			text-shadow: 1px 1px 0px #fff;
 		}
 
-		.wrapper.style3 {
+		.wrapper.style3.lightmode {
 			background-color: #f4f4f4;
 			text-shadow: 1px 1px 0px #fff;
 		}
 
-		.wrapper.style4 {
+		.wrapper.style4.lightmode {
 			background-color: #303030;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
+			padding: 0em 0 0.5em 0;
 		}
 
-			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
+			.wrapper.style4.lightmode h1, .wrapper.style4.lightmode h2, .wrapper.style4.lightmode h3, .wrapper.style4.lightmode h4, .wrapper.style4.lightmode h5, .wrapper.style4.lightmode h6 {
 				color: #fff;
 			}
 
-			.wrapper.style4 form input[type=text],
-			.wrapper.style4 form input[type=password],
-			.wrapper.style4 form select,
-			.wrapper.style4 form textarea {
+			.wrapper.style4.lightmode form input[type=text],
+			.wrapper.style4.lightmode form input[type=password],
+			.wrapper.style4.lightmode form select,
+			.wrapper.style4.lightmode form textarea {
 				border: none;
 				background: #282828;
 			}
 
-				.wrapper.style4 form input[type=text]:focus,
-				.wrapper.style4 form input[type=password]:focus,
-				.wrapper.style4 form select:focus,
-				.wrapper.style4 form textarea:focus {
+				.wrapper.style4.lightmode form input[type=text]:focus,
+				.wrapper.style4.lightmode form input[type=password]:focus,
+				.wrapper.style4.lightmode form select:focus,
+				.wrapper.style4.lightmode form textarea:focus {
 					background: #252525;
 				}
 
@@ -2104,32 +2155,32 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
-	#top {
+	#intro {
 		padding: 10em 0 10em 0;
 		text-align: left;
 	}
 
-		#top .image {
+		#intro .image {
 			border-radius: 100%;
 			width: 20em;
 			height: 20em;
 			margin: 0;
 		}
 
-			#top .image img {
+			#intro .image img {
 				border-radius: 100%;
 			}
 
-		#top h1 {
+		#intro h1 {
 			margin-top: 0.35em;
 		}
 
-		#top p {
+		#intro p {
 			font-size: 1.5em;
 			line-height: 1.75em;
 		}
 
-			#top p a {
+			#intro p a {
 				color: inherit;
 			}
 
@@ -2207,11 +2258,11 @@ input, select, textarea {
 
 		/* Articles */
 
-			#top {
+			#intro {
 				padding: 8em 0;
 			}
 
-				#top .image {
+				#intro .image {
 					width: 24em;
 					height: 24em;
 					margin: 0;
@@ -2225,12 +2276,12 @@ input, select, textarea {
 
 		/* Articles */
 
-			#top {
+			#intro {
 				text-align: center;
 				padding: 5em 0;
 			}
 
-				#top .image {
+				#intro .image {
 					margin: 0 auto 2em auto;
 				}
 
@@ -2405,17 +2456,17 @@ input, select, textarea {
 
 		/* Articles */
 
-			#top {
+			#intro {
 				padding: 3em 0;
 			}
 
-				#top .image {
+				#intro .image {
 					width: 15em;
 					height: 15em;
 					margin-bottom: 0;
 				}
 
-				#top p {
+				#intro p {
 					font-size: 1em;
 				}
 
